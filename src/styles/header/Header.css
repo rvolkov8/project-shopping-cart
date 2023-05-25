@@ -1,0 +1,12 @@
+.header {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: var(--bg-gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 75px;
+}
+
+.header > img {
+  align-self: center;
+  justify-self: flex-end;
+}
