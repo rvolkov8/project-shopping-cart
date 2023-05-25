@@ -1,0 +1,54 @@
+.home {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 95px - 35px);
+  background: url(../../assets/home-bg-picture.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 250px;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 21, 21, 1) 0%,
+    rgba(21, 21, 21, 0) 30%,
+    rgba(21, 21, 21, 1) 100%
+  );
+  z-index: 1;
+}
+
+.shop-now.button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  color: var(--white);
+  font-weight: 900;
+  font-size: 3.5rem;
+  background: none;
+  border: 0.5px solid var(--white);
+  cursor: pointer;
+  margin-top: 210px;
+  margin-bottom: 40px;
+}
+
+.shop-now.button:hover {
+  background-color: var(--red);
+  border: 0.5px solid var(--red);
+}
+
+.opening {
+  z-index: 2;
+  color: var(--white);
+  text-align: center;
+  font-weight: 300;
+  line-height: 180%;
+}
