@@ -1,0 +1,35 @@
+.menu {
+  grid-row: 2 / 3;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > ul {
+  width: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu > ul > * {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 300;
+}
+
+.menu > ul > *:first-child {
+  justify-self: flex-start;
+}
+
+.menu > ul > *:nth-child(2) {
+  justify-self: center;
+}
+
+.menu > ul > *:last-child {
+  justify-self: flex-end;
+}
+
+.menu > ul > *.active {
+  font-weight: 900;
+}
