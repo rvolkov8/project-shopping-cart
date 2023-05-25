@@ -1,0 +1,78 @@
+.products {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: 480px;
+  grid-auto-columns: 270px;
+  grid-auto-rows: 480px;
+  gap: 35px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.poster.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 0.5px solid var(--black);
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+  height: 100%;
+}
+
+.poster.container:hover {
+  border: 0.5px solid var(--white);
+  box-shadow: -7px 7px 0 var(--white);
+}
+
+.poster.picture {
+  width: 220px;
+  height: 330px;
+  margin-bottom: 5px;
+}
+
+.poster.name {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+
+.prices.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.old-price:not(.only) {
+  color: var(--white);
+  font-size: 0.8rem;
+  text-decoration: line-through var(--red);
+}
+
+.old-price.only {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.new-price {
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.poster.size {
+  color: var(--font-gray);
+  font-size: 0.7rem;
+}
