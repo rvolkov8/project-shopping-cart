@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 
-const Products = ({ posters }) => {
+const Products = ({ posters, handlePosterSelection }) => {
   const postersElements = posters.map((poster) => {
     const posterURL = `/products/${poster.id}`;
     return (
-      <Link to={posterURL} key={poster.id}>
+      <Link
+        onClick={() => handlePosterSelection(poster.id)}
+        to={posterURL}
+        key={poster.id}
+      >
         <div className="poster container">
           <img className="poster picture" src={poster.file} alt="Poster" />
           <div className="poster name">{poster.name}</div>
