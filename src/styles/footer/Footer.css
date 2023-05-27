@@ -1,4 +1,6 @@
 .footer {
+  position: sticky;
+  bottom: 0;
   grid-row: 4 / 5;
   background: var(--black);
   display: flex;

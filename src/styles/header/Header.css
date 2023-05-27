@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   grid-area: 1 / 1 / 2 / 2;
   background-color: var(--bg-gray);
   display: grid;
@@ -7,10 +8,12 @@
 }
 
 .cart-button {
-  position: relative;
+  position: fixed;
+  top: 15px;
   align-self: center;
   justify-self: flex-end;
   text-decoration: none;
+  z-index: 3;
 }
 
 .cart-items-quantity {
