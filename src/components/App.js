@@ -281,7 +281,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems} />
       <Menu />
       <Main
         posters={posters}

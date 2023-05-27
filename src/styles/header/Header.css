@@ -7,10 +7,29 @@
 }
 
 .cart-button {
+  position: relative;
   align-self: center;
   justify-self: flex-end;
+  text-decoration: none;
 }
 
 .cart-button > img:hover {
   filter: brightness(0.8);
+}
+
+.cart-items-quantity {
+  position: absolute;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: var(--red);
+  border-radius: 50px;
+  height: 19px;
+  width: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -7px;
+  top: 3px;
+  cursor: pointer;
 }
