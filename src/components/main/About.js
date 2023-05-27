@@ -1,29 +1,29 @@
 const About = () => {
   return (
     <div className="about">
-      <div className="body">
+      <div className="about-body">
         Welcome to Marvel Poster Universe, your ultimate destination for an
         extraordinary collection of Marvel posters.
       </div>
-      <div className="heading">
+      <div className="about-heading">
         Curating Marvel's Finest Artwork for Marvel Enthusiasts Worldwide
       </div>
-      <div className="body">
+      <div className="about-body">
         At Marvel Poster Universe, we are passionate about all things Marvel and
         dedicated to curating a vast array of posters that capture the essence
         of this beloved universe.
       </div>
-      <div className="body">
+      <div className="about-body">
         Our mission is to provide Marvel enthusiasts, collectors, and fans alike
         with a one-stop online store where they can find and indulge in the
         beauty and excitement of Marvel art. We believe that every wall deserves
         to be adorned with the vibrant colors, heroic characters, and
         captivating stories that define the Marvel Universe.
       </div>
-      <div className="heading">
+      <div className="about-heading">
         Transform Your Living Space with Premium Quality Marvel Posters
       </div>
-      <div className="body">
+      <div className="about-body">
         With our carefully selected range of posters, encompassing everything
         from iconic comic book covers to stunning movie art, we strive to cater
         to a variety of tastes and preferences. Each poster we offer is

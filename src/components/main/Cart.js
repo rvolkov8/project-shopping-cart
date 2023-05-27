@@ -6,6 +6,7 @@ const Cart = ({
   handleDecreaseQuantity,
   handleQuantityChange,
   handleDeleteItem,
+  handlePurchase,
 }) => {
   const itemsElements = cartItems.map((cartItem) => {
     const oldPriceSubtotal = (cartItem.oldPrice * cartItem.quantity).toFixed(2);
@@ -92,10 +93,13 @@ const Cart = ({
                 </button>
               </Link>
               <Link
+                replace
                 className="purchase-button-link"
                 to="/purchase-confirmation"
               >
-                <button className="purchase-button">Purchase</button>
+                <button onClick={handlePurchase} className="purchase-button">
+                  Purchase
+                </button>
               </Link>
             </div>
           </>

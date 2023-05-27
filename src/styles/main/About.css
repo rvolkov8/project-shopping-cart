@@ -5,7 +5,7 @@
   cursor: default;
 }
 
-.body {
+.about-body {
   color: var(--font-gray);
   font-weight: 300;
   font-size: 1.1rem;
@@ -13,7 +13,7 @@
   margin-bottom: 40px;
 }
 
-.heading {
+.about-heading {
   color: var(--white);
   font-weight: 700;
   font-size: 1.5rem;

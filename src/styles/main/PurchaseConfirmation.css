@@ -1,0 +1,38 @@
+.purchase-confirmation {
+  height: 100%;
+  padding: 50px 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  cursor: default;
+  text-align: center;
+}
+
+.purchase-confirmation-heading {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.purchase-confirmation-body {
+  color: var(--font-gray);
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.progress {
+  width: 129.6px;
+  height: 21.6px;
+  background: linear-gradient(#ec1d24 0 0) left/0% 100% no-repeat #a9a9a9;
+  animation: progress-jgv380 9s infinite linear;
+}
+
+@keyframes progress-jgv380 {
+  100% {
+    background-size: 100% 100%;
+  }
+}

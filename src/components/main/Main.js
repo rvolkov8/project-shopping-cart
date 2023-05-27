@@ -4,6 +4,7 @@ import Products from './Products';
 import Product from './Product';
 import Cart from './Cart';
 import About from './About';
+import PurchaseConfirmation from './PurchaseConfirmation';
 
 const Main = ({
   posters,
@@ -15,6 +16,7 @@ const Main = ({
   handleDecreaseQuantity,
   handleQuantityChange,
   handleDeleteItem,
+  handlePurchase,
 }) => {
   return (
     <div className="main">
@@ -50,10 +52,15 @@ const Main = ({
               handleDecreaseQuantity={handleDecreaseQuantity}
               handleQuantityChange={handleQuantityChange}
               handleDeleteItem={handleDeleteItem}
+              handlePurchase={handlePurchase}
             />
           }
         />
         <Route path="/about" element={<About />} />
+        <Route
+          path="/purchase-confirmation"
+          element={<PurchaseConfirmation />}
+        />
       </Routes>
     </div>
   );

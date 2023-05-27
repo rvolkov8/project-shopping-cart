@@ -234,6 +234,10 @@ function App() {
     });
   };
 
+  const handlePurchase = () => {
+    setCartItems([]);
+  };
+
   const handleQuantityChange = (e, id) => {
     const inputValue = e.target.value;
     const parsedValue = parseInt(inputValue, 10);
@@ -257,6 +261,7 @@ function App() {
     }, 0);
     setCartItems((prevState) => {
       const updatedState = [...prevState];
+      // eslint-disable-next-line array-callback-return
       updatedState.map((item) => {
         if (item.id === id && totalItems < 99) {
           item.quantity++;
@@ -269,6 +274,7 @@ function App() {
   const handleDecreaseQuantity = (id) => {
     setCartItems((prevState) => {
       const updatedState = [...prevState];
+      // eslint-disable-next-line array-callback-return
       updatedState.map((item) => {
         if (item.id === id && item.quantity > 1) {
           item.quantity--;
@@ -301,6 +307,7 @@ function App() {
         handleDecreaseQuantity={handleDecreaseQuantity}
         handleQuantityChange={handleQuantityChange}
         handleDeleteItem={handleDeleteItem}
+        handlePurchase={handlePurchase}
       />
       <Footer />
     </>
