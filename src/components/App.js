@@ -235,22 +235,30 @@ function App() {
   };
 
   const handleQuantityChange = (e, id) => {
-    setCartItems((prevState) => {
-      const updatedState = [...prevState];
-      updatedState.map((item) => {
-        if (item.id === id) {
-          item.quantity = e.target.value;
-        }
+    const inputValue = e.target.value;
+    const parsedValue = parseInt(inputValue, 10);
+
+    if (!isNaN(parsedValue) && parsedValue >= 1 && parsedValue <= 99) {
+      setCartItems((prevState) => {
+        const updatedState = prevState.map((item) => {
+          if (item.id === id) {
+            item.quantity = parsedValue;
+          }
+          return item;
+        });
+        return updatedState;
       });
-      return updatedState;
-    });
+    }
   };
 
   const handleIncreaseQuantity = (id) => {
+    const totalItems = cartItems.reduce((accumulator, item) => {
+      return accumulator + item.quantity;
+    }, 0);
     setCartItems((prevState) => {
       const updatedState = [...prevState];
       updatedState.map((item) => {
-        if (item.id === id) {
+        if (item.id === id && totalItems < 99) {
           item.quantity++;
         }
       });
@@ -262,7 +270,7 @@ function App() {
     setCartItems((prevState) => {
       const updatedState = [...prevState];
       updatedState.map((item) => {
-        if (item.id === id) {
+        if (item.id === id && item.quantity > 1) {
           item.quantity--;
         }
       });

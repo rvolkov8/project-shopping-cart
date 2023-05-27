@@ -25,7 +25,8 @@
   background: var(--red);
   border-radius: 50px;
   height: 19px;
-  width: 19px;
+  width: fit-content;
+  min-width: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
