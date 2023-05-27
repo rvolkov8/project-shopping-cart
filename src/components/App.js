@@ -22,7 +22,7 @@ import groot15File from '../assets/posters/15-groot.png';
 import ironMan16File from '../assets/posters/16-iron-man.png';
 
 function App() {
-  const [posters, setPosters] = useState([
+  const [posters] = useState([
     {
       id: 'avengers-1',
       name: `Avengers: Endgame - Journey's End`,
@@ -177,9 +177,18 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   useMemo(() => {
-    setSelectedPosterId(
-      JSON.parse(window.localStorage.getItem('selectedPosterId'))
-    );
+    const storedSelectedPosterId =
+      window.localStorage.getItem('selectedPosterId');
+    if (storedSelectedPosterId) {
+      setSelectedPosterId(JSON.parse(storedSelectedPosterId));
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedCartItems = window.localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
   }, []);
 
   useEffect(() => {
@@ -187,7 +196,8 @@ function App() {
       'selectedPosterId',
       JSON.stringify(selectedPosterId)
     );
-  }, [selectedPosterId]);
+    window.localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [selectedPosterId, cartItems]);
 
   const handlePosterSelection = (id) => {
     setSelectedPosterId(id);
@@ -224,6 +234,51 @@ function App() {
     });
   };
 
+  const handleQuantityChange = (e, id) => {
+    setCartItems((prevState) => {
+      const updatedState = [...prevState];
+      updatedState.map((item) => {
+        if (item.id === id) {
+          item.quantity = e.target.value;
+        }
+      });
+      return updatedState;
+    });
+  };
+
+  const handleIncreaseQuantity = (id) => {
+    setCartItems((prevState) => {
+      const updatedState = [...prevState];
+      updatedState.map((item) => {
+        if (item.id === id) {
+          item.quantity++;
+        }
+      });
+      return updatedState;
+    });
+  };
+
+  const handleDecreaseQuantity = (id) => {
+    setCartItems((prevState) => {
+      const updatedState = [...prevState];
+      updatedState.map((item) => {
+        if (item.id === id) {
+          item.quantity--;
+        }
+      });
+      return updatedState;
+    });
+  };
+
+  const handleDeleteItem = (id) => {
+    const index = cartItems.findIndex((item) => item.id === id);
+    setCartItems((prevState) => {
+      const updatedState = [...prevState];
+      updatedState.splice(index, 1);
+      return updatedState;
+    });
+  };
+
   return (
     <>
       <Header />
@@ -233,6 +288,11 @@ function App() {
         selectedPosterId={selectedPosterId}
         handlePosterSelection={handlePosterSelection}
         handleAddToCart={handleAddToCart}
+        cartItems={cartItems}
+        handleIncreaseQuantity={handleIncreaseQuantity}
+        handleDecreaseQuantity={handleDecreaseQuantity}
+        handleQuantityChange={handleQuantityChange}
+        handleDeleteItem={handleDeleteItem}
       />
       <Footer />
     </>

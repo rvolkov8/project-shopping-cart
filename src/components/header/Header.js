@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import cartIcon from '../../assets/shopping-cart.svg';
 
@@ -5,7 +6,9 @@ const Header = () => {
   return (
     <div className="header">
       <Logo />
-      <img src={cartIcon} alt="Cart icon" />
+      <Link className="cart-button" to="/cart">
+        <img src={cartIcon} alt="Cart icon" />
+      </Link>
     </div>
   );
 };

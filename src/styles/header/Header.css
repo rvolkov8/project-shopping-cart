@@ -6,7 +6,11 @@
   padding: 10px 75px;
 }
 
-.header > img {
+.cart-button {
   align-self: center;
   justify-self: flex-end;
+}
+
+.cart-button > img:hover {
+  filter: brightness(0.8);
 }

@@ -2,12 +2,18 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Products from './Products';
 import Product from './Product';
+import Cart from './Cart';
 
 const Main = ({
   posters,
   selectedPosterId,
   handlePosterSelection,
   handleAddToCart,
+  cartItems,
+  handleIncreaseQuantity,
+  handleDecreaseQuantity,
+  handleQuantityChange,
+  handleDeleteItem,
 }) => {
   return (
     <div className="main">
@@ -34,6 +40,18 @@ const Main = ({
             }
           />
         </Route>
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cartItems={cartItems}
+              handleIncreaseQuantity={handleIncreaseQuantity}
+              handleDecreaseQuantity={handleDecreaseQuantity}
+              handleQuantityChange={handleQuantityChange}
+              handleDeleteItem={handleDeleteItem}
+            />
+          }
+        />
       </Routes>
     </div>
   );
