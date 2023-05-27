@@ -1,0 +1,21 @@
+.about {
+  padding: 50px 270px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.body {
+  color: var(--font-gray);
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.heading {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}

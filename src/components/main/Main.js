@@ -3,6 +3,7 @@ import Home from './Home';
 import Products from './Products';
 import Product from './Product';
 import Cart from './Cart';
+import About from './About';
 
 const Main = ({
   posters,
@@ -52,6 +53,7 @@ const Main = ({
             />
           }
         />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );

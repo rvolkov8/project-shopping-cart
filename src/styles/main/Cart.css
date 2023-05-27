@@ -99,6 +99,7 @@
   justify-content: center;
   align-items: center;
   gap: 2px;
+  cursor: default;
 }
 
 .cart-item-old-price-only {
@@ -140,6 +141,7 @@
   display: grid;
   grid-template-columns: 1fr 150px 150px;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .total-text {

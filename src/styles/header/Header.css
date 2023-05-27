@@ -13,10 +13,6 @@
   text-decoration: none;
 }
 
-.cart-button > img:hover {
-  filter: brightness(0.8);
-}
-
 .cart-items-quantity {
   position: absolute;
   color: var(--white);
