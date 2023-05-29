@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import bgVideo from '../../assets/bg-video-1.mp4';
 
 const Home = () => {
   return (
     <div className="home">
+      <video src={bgVideo} autoPlay muted loop></video>
       <div className="bg-gradient"></div>
       <Link to="/products">
         <button className="shop-now button">Shop Now</button>
