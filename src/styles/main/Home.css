@@ -43,6 +43,11 @@
 .shop-now.button:hover {
   background-color: var(--red);
   border: 0.5px solid var(--red);
+  transition: background-color 0.22s;
+}
+
+.shop-now.button:active {
+  background-color: var(--red-pressed);
 }
 
 .opening {

@@ -204,34 +204,39 @@ function App() {
   };
 
   const handleAddToCart = () => {
+    const totalItems = cartItems.reduce((accumulator, item) => {
+      return accumulator + item.quantity;
+    }, 0);
     const selectedPoster = posters.find(
       (poster) => poster.id === selectedPosterId
     );
 
-    setCartItems((prevState) => {
-      const updatedState = [...prevState];
-      const existingCartItemIndex = updatedState.findIndex(
-        (item) => item.id === selectedPoster.id
-      );
+    if (totalItems < 99) {
+      setCartItems((prevState) => {
+        const updatedState = [...prevState];
+        const existingCartItemIndex = updatedState.findIndex(
+          (item) => item.id === selectedPoster.id
+        );
 
-      if (existingCartItemIndex !== -1) {
-        const updatedCartItem = {
-          ...updatedState[existingCartItemIndex],
-          quantity: updatedState[existingCartItemIndex].quantity + 1,
-        };
-        updatedState[existingCartItemIndex] = updatedCartItem;
-      } else {
-        updatedState.push({
-          id: selectedPoster.id,
-          name: selectedPoster.name,
-          file: selectedPoster.file,
-          quantity: 1,
-          oldPrice: selectedPoster.oldPrice,
-          newPrice: selectedPoster.newPrice,
-        });
-      }
-      return updatedState;
-    });
+        if (existingCartItemIndex !== -1) {
+          const updatedCartItem = {
+            ...updatedState[existingCartItemIndex],
+            quantity: updatedState[existingCartItemIndex].quantity + 1,
+          };
+          updatedState[existingCartItemIndex] = updatedCartItem;
+        } else {
+          updatedState.push({
+            id: selectedPoster.id,
+            name: selectedPoster.name,
+            file: selectedPoster.file,
+            quantity: 1,
+            oldPrice: selectedPoster.oldPrice,
+            newPrice: selectedPoster.newPrice,
+          });
+        }
+        return updatedState;
+      });
+    }
   };
 
   const handlePurchase = () => {

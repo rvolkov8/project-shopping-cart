@@ -207,10 +207,15 @@
   font-weight: 700;
   padding: 6px 0;
   cursor: pointer;
+  transition: background-color 0.15s;
 }
 
 .purchase-button:hover {
   border: 1px solid var(--white);
+}
+
+.purchase-button:active {
+  background-color: var(--red-pressed);
 }
 
 .empty-cart {
