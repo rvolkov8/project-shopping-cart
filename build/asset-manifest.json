@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/project-shopping-cart/static/css/main.c5d5a767.css",
+    "main.js": "/project-shopping-cart/static/js/main.0cf43a84.js",
+    "static/media/bg-video-1.mp4": "/project-shopping-cart/static/media/bg-video-1.a914f4ce4279c7080074.mp4",
+    "static/media/8-wandavision.png": "/project-shopping-cart/static/media/8-wandavision.cfeb1ef69bf360baeb47.png",
+    "static/media/1-avengers.png": "/project-shopping-cart/static/media/1-avengers.509e27d744264a38b495.png",
+    "static/media/2-spider-man.png": "/project-shopping-cart/static/media/2-spider-man.6b7c56f1eb1d48b5c89c.png",
+    "static/media/3-hulk.png": "/project-shopping-cart/static/media/3-hulk.ea3f7c7da1e4931a029d.png",
+    "static/media/7-thor.png": "/project-shopping-cart/static/media/7-thor.b8eb499e1529766c3432.png",
+    "static/media/4-deadpool.png": "/project-shopping-cart/static/media/4-deadpool.19c3acef900c92292d65.png",
+    "static/media/12-moon-knight.png": "/project-shopping-cart/static/media/12-moon-knight.a874d1c6aee911680afd.png",
+    "static/media/9-venom.png": "/project-shopping-cart/static/media/9-venom.a694ee7771f1a83e28ae.png",
+    "static/media/13-avengers.png": "/project-shopping-cart/static/media/13-avengers.a4f4b3fa12ec38f45bbf.png",
+    "static/media/10-loki.png": "/project-shopping-cart/static/media/10-loki.32cae291da0d045d9052.png",
+    "static/media/6-guardians-of-the-galaxy.png": "/project-shopping-cart/static/media/6-guardians-of-the-galaxy.3f32042a010a2d46b465.png",
+    "static/media/16-iron-man.png": "/project-shopping-cart/static/media/16-iron-man.4df130dcecda30a3d058.png",
+    "static/media/11-black-panther.png": "/project-shopping-cart/static/media/11-black-panther.925616cf1f711376fd98.png",
+    "static/media/15-groot.png": "/project-shopping-cart/static/media/15-groot.8238a1e5babac0d52bed.png",
+    "static/media/14-doctor-strange.png": "/project-shopping-cart/static/media/14-doctor-strange.a132dbf5a9d4f1b08672.png",
+    "static/media/5-captain-america.png": "/project-shopping-cart/static/media/5-captain-america.ccc2ab6f634081ade735.png",
+    "index.html": "/project-shopping-cart/index.html",
+    "static/media/shopping-cart.svg": "/project-shopping-cart/static/media/shopping-cart.1d8d0ed17ce2a6d7fa535476efcdeb9e.svg",
+    "main.c5d5a767.css.map": "/project-shopping-cart/static/css/main.c5d5a767.css.map",
+    "main.0cf43a84.js.map": "/project-shopping-cart/static/js/main.0cf43a84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5d5a767.css",
+    "static/js/main.0cf43a84.js"
+  ]
+}
