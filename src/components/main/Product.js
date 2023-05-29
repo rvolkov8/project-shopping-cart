@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Product = ({ posters, selectedPosterId, handleAddToCart }) => {
   const selectedPoster = posters.find(
     (poster) => poster.id === selectedPosterId
@@ -46,6 +48,11 @@ const Product = ({ posters, selectedPosterId, handleAddToCart }) => {
           <button onClick={handleAddToCart} className="add-to-cart-button">
             Add to cart
           </button>
+          <Link className="view-all-posters-link" to="/products">
+            <button className="view-all-posters-button">
+              View all posters
+            </button>
+          </Link>
         </div>
       </div>
     </div>
