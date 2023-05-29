@@ -5,6 +5,7 @@ import Product from './Product';
 import Cart from './Cart';
 import About from './About';
 import PurchaseConfirmation from './PurchaseConfirmation';
+import NotFound from './NotFound';
 
 const Main = ({
   posters,
@@ -61,6 +62,7 @@ const Main = ({
           path="/purchase-confirmation"
           element={<PurchaseConfirmation />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

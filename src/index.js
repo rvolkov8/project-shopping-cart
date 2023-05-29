@@ -15,6 +15,7 @@ import './styles/main/Products.css';
 import './styles/main/PurchaseConfirmation.css';
 import './styles/footer/Footer.css';
 import './styles/footer/Github.css';
+import './styles/main/NotFound.css';
 
 import App from './components/App';
 
